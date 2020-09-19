@@ -11,9 +11,6 @@
           <li class="nav-item">
             <router-link class="nav-link" to="/random">Go to random</router-link>
           </li>
-          <li class="nav-item">
-            <router-link class="nav-link" to="/entry/animals">Go to Category</router-link>
-          </li>
         </ul>
       </div>
     </nav>
@@ -27,5 +24,7 @@
 
 
 <style>
-
+    #app {
+        margin-top: 50px;
+    }
 </style>
