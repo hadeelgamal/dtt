@@ -7,14 +7,15 @@
         <p>{{ entry.about }}</p>
     </div>
 
-    <ul>
-        <li v-for="item of entries" v-bind:key="item.mal_id">
-            <router-link :to="{path: '/entry/' + item.mal_id}">
-                <img :src="item.image_url">
-                <strong>{{item.name}}</strong>
-            </router-link>
-        </li>
-    </ul>
+    <b-card-group deck>
+      <b-card v-for="item of entries" v-bind:key="item.mal_id" :img-src="item.image_url">
+        <router-link :to="{path: '/entry/' + item.mal_id}">
+            <b-card-text>{{item.name}}</b-card-text>
+
+        </router-link>
+    </b-card>
+</b-card-group>
+
   </div>
 </template>
 

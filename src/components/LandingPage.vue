@@ -7,14 +7,19 @@
         <button type="button" class="btn btn-primary" v-on:click="entries.sort(function(a, b) {return a.name < b.name ? 1 : -1})">Sort desc</button>
     </div>
 
-    <ul>
-        <li v-for="entry of entries" v-bind:key="entry.mal_id">
-            <router-link :to="{path: '/entry/' + entry.mal_id}">
-                <img :src="entry.image_url">
-                <strong>{{entry.name}}</strong>
-            </router-link>
-        </li>
-    </ul>
+
+
+
+<b-card-group columns>
+      <b-card v-for="entry of entries" col v-bind:key="entry.mal_id" :img-src="entry.image_url">
+        <router-link :to="{path: '/entry/' + entry.mal_id}">
+            <b-card-text>{{entry.name}}</b-card-text>
+
+        </router-link>
+    </b-card>
+</b-card-group>
+
+    
   </div>
 </template>
 

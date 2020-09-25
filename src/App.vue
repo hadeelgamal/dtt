@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-
+<b-container>
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dtt-navbar" aria-controls="dtt-navbar" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -18,7 +18,7 @@
     <!-- route outlet -->
     <!-- component matched by the route will render here -->
     <router-view></router-view>
-
+</b-container>
   </div>
 </template>
 
