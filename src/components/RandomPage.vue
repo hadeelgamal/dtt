@@ -2,10 +2,23 @@
   <div>
     <h3>Random Page</h3>
 
-    <div>
-        <img :src="entry.image_url">
-        <strong>{{ entry.name }}</strong>
+    <div class="mb-3">
+      <b-card no-body class="overflow-hidden">
+        <b-row no-gutters>
+          <b-col md="3">
+            <b-card-img :src="entry.image_url" alt="Image" class="rounded-0"></b-card-img>
+          </b-col>
+          <b-col md="9">
+            <b-card-body :title="entry.name">
+              <b-card-text>
+                {{ entry.about }}
+              </b-card-text>
+            </b-card-body>
+          </b-col>
+        </b-row>
+      </b-card>
     </div>
+
 
     <div>
         <button type="button" class="btn btn-primary" v-on:click="randomize">Random</button>
@@ -28,6 +41,11 @@ export default {
   methods: {
       randomize: function () {
         this.entry = this.entries[Math.floor(Math.random()*this.entries.length)];
+        axios.get('https://api.jikan.moe/v3/character/' + this.entry.mal_id)
+          .then(response => {
+              // JSON responses are automatically parsed.
+              this.entry = response.data
+          })
       }
   },
   created () {
@@ -40,6 +58,12 @@ export default {
       .catch(e => {
           this.errors.push(e)
       })
+
+
+      
+
+
+
   }
 }
 </script>

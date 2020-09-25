@@ -1,11 +1,25 @@
 <template>
   <div>
     <h3>Entry Page</h3>
-    <div>
-        <img :src="entry.image_url">
-        <strong>{{ entry.name }}</strong>
-        <p>{{ entry.about }}</p>
-    </div>
+
+  <div class="mb-3">
+  <b-card no-body class="overflow-hidden">
+    <b-row no-gutters>
+      <b-col md="3">
+        <b-card-img :src="entry.image_url" alt="Image" class="rounded-0"></b-card-img>
+      </b-col>
+      <b-col md="9">
+        <b-card-body :title="entry.name">
+          <b-card-text>
+            {{ entry.about }}
+          </b-card-text>
+        </b-card-body>
+      </b-col>
+    </b-row>
+  </b-card>
+</div>
+
+
 
     <b-card-group deck>
       <b-card v-for="item of entries" v-bind:key="item.mal_id" :img-src="item.image_url">

@@ -8,8 +8,6 @@
     </div>
 
 
-
-
 <b-card-group columns>
       <b-card v-for="entry of entries" col v-bind:key="entry.mal_id" :img-src="entry.image_url">
         <router-link :to="{path: '/entry/' + entry.mal_id}">
