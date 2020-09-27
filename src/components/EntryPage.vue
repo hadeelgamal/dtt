@@ -22,12 +22,13 @@
 
 
     <b-card-group deck>
-      <b-card v-for="item of entries" v-bind:key="item.mal_id" :img-src="item.image_url">
-        <router-link :to="{path: '/entry/' + item.mal_id}">
+      
+        <router-link v-for="item of entries" v-bind:key="item.mal_id" :to="{path: '/entry/' + item.mal_id}">
+        <b-card  :img-src="item.image_url">
             <b-card-text>{{item.name}}</b-card-text>
 
-        </router-link>
     </b-card>
+    </router-link>
 </b-card-group>
 
   </div>

@@ -2,19 +2,24 @@
   <div>
     <h3>Home Page</h3>
 
-    <div>
-        <button type="button" class="btn btn-primary" v-on:click="entries.sort(function(a, b) {return a.name > b.name ? 1 : -1})">Sort asc</button>
-        <button type="button" class="btn btn-primary" v-on:click="entries.sort(function(a, b) {return a.name < b.name ? 1 : -1})">Sort desc</button>
+    <div class="h2 mb-0 ic-pos">
+        <b-icon-arrow-up  v-on:click="entries.sort(function(a, b) {return a.name > b.name ? 1 : -1})"></b-icon-arrow-up>
+        
+        <b-icon-arrow-down v-on:click="entries.sort(function(a, b) {return a.name < b.name ? 1 : -1})"></b-icon-arrow-down>
+      
     </div>
 
 
 <b-card-group columns>
-      <b-card v-for="entry of entries" col v-bind:key="entry.mal_id" :img-src="entry.image_url">
-        <router-link :to="{path: '/entry/' + entry.mal_id}">
+      
+        <router-link  v-for="entry of entries" col v-bind:key="entry.mal_id" :to="{path: '/entry/' + entry.mal_id}">
+        <b-card :img-src="entry.image_url">
+          
             <b-card-text>{{entry.name}}</b-card-text>
 
+        </b-card>
         </router-link>
-    </b-card>
+    
 </b-card-group>
 
     
