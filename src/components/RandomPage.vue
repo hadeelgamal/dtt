@@ -1,7 +1,5 @@
 <template>
   <div>
-    <h3>Random Page</h3>
-
     <div class="mb-3">
       <b-card no-body class="overflow-hidden">
         <b-row no-gutters>
@@ -21,7 +19,7 @@
 
 
     <div>
-        <button type="button" class="btn btn-primary" v-on:click="randomize">Random</button>
+        <button type="button" class="btn btn-primary" v-on:click="randomize">I am feeling lucky</button>
     </div>
   </div>
 </template>

@@ -1,14 +1,12 @@
 <template>
   <div>
-    <h3>Entry Page</h3>
-
   <div class="mb-3">
   <b-card no-body class="overflow-hidden">
     <b-row no-gutters>
       <b-col md="3">
         <b-card-img :src="entry.image_url" alt="Image" class="rounded-0"></b-card-img>
       </b-col>
-      <b-col md="9">
+      <b-col md="7">
         <b-card-body :title="entry.name">
           <b-card-text>
             {{ entry.about }}
@@ -80,4 +78,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
 </style>

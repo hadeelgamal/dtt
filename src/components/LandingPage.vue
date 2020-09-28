@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h3>Home Page</h3>
 
     <div class="h2 mb-0 ic-pos">
         <b-icon-arrow-up  v-on:click="entries.sort(function(a, b) {return a.name > b.name ? 1 : -1})"></b-icon-arrow-up>
