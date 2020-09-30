@@ -28,6 +28,3 @@ npm run lint
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-
-If so, how? (How can I install it? What are the code snippets that work out-of-box?)
-If I like it, how can I join? (What license is this project under? What are the rules for contributing?)
