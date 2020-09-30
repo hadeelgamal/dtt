@@ -8,15 +8,13 @@ import EntryPage from '@/components/EntryPage.vue'
 Vue.use(VueRouter);
 
 const routes = [
-  { path: '/', component: LandingPage },
-  { path: '/random', component: RandomPage },
-  { path: '/entry/:id', component: EntryPage }
+    { path: '/', component: LandingPage },
+    { path: '/random', component: RandomPage },
+    { path: '/entry/:id', component: EntryPage }
 ];
 
 const router = new VueRouter({
-  routes
+    routes
 });
 
 export default router;
-
-
